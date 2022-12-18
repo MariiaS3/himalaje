@@ -1,0 +1,257 @@
+@media screen and (max-width:991px) {
+
+    /* ---------------- tlo (paralax) start   ------------------ */
+    .paralax {
+        background-image: url("./img/img_991_490.png");
+        background-size: cover;
+    }
+
+    /* ---------------- film(iframe) and charakterystyka   ------------------ */
+
+    .him {
+        max-width: 620px;
+    }
+
+    iframe {
+        width: 600px;
+        height: 300px;
+    }
+
+    .film {
+        height: 310px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* -------------------- text na tle-------------------*/
+    .l1 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .l2 {
+        font-size: 80px;
+        letter-spacing: 30px;
+    }
+
+    /* -------------------- obrazki na tle-------------------*/
+
+    .image {
+        width: 120px;
+        height: 110px;
+        padding: 20px;
+    }
+
+    /* ---------------- zdobywcy(boxes)  ------------------ */
+
+    h2 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+
+    .card {
+        padding-top: 40px;
+        font-size: 15px;
+    }
+
+    .contain {
+        margin: 15px;
+        width: 130px;
+        height: 180px;
+    }
+
+    /* ---------------- footer ------------------ */
+    .foot {
+        font-size: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* ==================== second pages  ====================== */
+    .quote {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    td,
+    th {
+        padding: 10px 5px 10px 5px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    /* -------------- hamburger (pasek) start --------------*/
+
+    .pasek {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        padding-left: 50px;
+    }
+
+    .wrapper {
+        font-size: 16px;
+        position: fixed;
+        top: 0;
+        height: 180px;
+        right: 0px;
+        width: 60%;
+        border-radius: 0px 30px;
+        background: rgb(255, 254, 254);
+        clip-path: circle(1px at calc(100% - 50px) 30px);
+        transition: all 0.5s ease-in-out;
+    }
+
+    #bar:checked~.wrapper {
+        clip-path: circle(75%);
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        right: 25px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: rgb(240, 230, 213);
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid rgb(173, 162, 142);
+    }
+
+    #bar:checked~.menu-btn {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #bar:checked~.menu-btn i:before {
+        content: "\f00d"; /* zmiana znaczka bar na x*/
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    /* ---------------- tlo (paralax) start   ------------------ */
+
+    .paralax {
+        background-position: right;
+        background-image: url("./img/img_767_379.png");
+    }
+
+    /* -------------------- text na tle-------------------*/
+    .l1 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .l2 {
+        font-size: 60px;
+        letter-spacing: 20px;
+    }
+
+    /* -------------------- obrazki na tle-------------------*/
+
+    .image {
+        width: 100px;
+        height: 90px;
+        padding: 10px;
+    }
+
+    /* ---------------- film(iframe) and charakterystyka   ------------------ */
+
+    .him {
+        max-width: 500px;
+    }
+
+    iframe {
+        width: 450px;
+        height: 250px;
+    }
+
+    .film {
+        height: 260px;
+        width: 470px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    /* ---------------- zdobywcy(boxes)  ------------------ */
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .card {
+        padding-top: 20px;
+        font-size: 13px;
+    }
+
+    .contain {
+        margin: 10px;
+        width: 100px;
+        height: 150px;
+    }
+
+    /* ---------------- footer ------------------ */
+    .foot {
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer {
+        height: 70px;
+    }
+
+    /* ==================== second pages  ====================== */
+    .quote {
+        width: 250px;
+        height: 250px;
+    }
+
+    .paralax-quote {
+        padding-top: 100px;
+    }
+
+    .two-panel {
+        max-width: 600px;
+    }
+
+
+    th {
+        font-size: 15px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+}

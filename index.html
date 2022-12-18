@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>himalaje</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style_screen.css">
+
+    <link type="image/png" sizes="16x16" rel="icon" href="./img/icons-mountain-16.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        let click = true;
+        window.onresize = function () {
+            if (window.innerWidth > 767) {
+                document.getElementById("menu-btn").style.display = "none";
+                if (click === false) {
+                    document.getElementById("pasek").style.justifyContent = "flex-start"
+                    document.getElementById("pasek").style.paddingLeft = "10%"
+                } else {
+                    document.getElementById("pasek").style.justifyContent = "space-evenly"
+                    document.getElementById("pasek").style.paddingLeft = "0"
+                }
+            } else if (window.innerWidth <= 767 && click === true) {
+                document.getElementById("menu-btn").style.display = "block";
+                document.getElementById("pasek").style.justifyContent = "flex-start"
+                document.getElementById("pasek").style.paddingLeft = "10px"
+            }
+        }
+        function displayPanelOne() {
+            click = true
+            document.getElementById("one-page").style.display = "block";
+            document.getElementById("two-page").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+            if (window.innerWidth <= 767) {
+                document.getElementById("menu-btn").style.display = "block"
+            }
+            else {
+                document.getElementById("pasek").style.justifyContent = "space-evenly"
+                document.getElementById("pasek").style.paddingLeft = "0"
+            }
+
+        }
+        function displayPanelTwo() {
+            click = false
+            document.getElementById("two-page").style.display = "block";
+            document.getElementById("one-page").style.display = "none";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("menu-btn").style.display = "none"
+            if (window.innerWidth > 767) {
+                document.getElementById("pasek").style.justifyContent = "flex-start"
+                document.getElementById("pasek").style.paddingLeft = "10%"
+            }
+            document.getElementById("bar").checked = false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="pasek" id="pasek">
+        <input class="bar" type="checkbox" id="bar">
+        <label for="bar" class="menu-btn" id="menu-btn">
+            <i class="fa fa-bars" aria-hidden="true"> </i>
+        </label>
+        <input class="radio" id="logo" name="group" type="radio" onclick="displayPanelOne()">
+        <label class="logo" for="logo">HIMALAJE</label>
+        <nav class="wrapper" id="menu">
+            <ul>
+                <li><a class="menu" href="#film">Film</a></li>
+                <li><a class="menu" href="#charakterystyka">Charakterystyka</a></li>
+                <li><a class="menu" href="#container">Zdobywcy</a></li>
+                <li>
+                    <input class="radio" id="two" name="group" type="radio" onclick="displayPanelTwo()">
+                    <label class="menu" for="two">Zaopatrzenie</label>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <!-- first page -->
+        <div id="one-page">
+            <div class="paralax">
+                <p class="log l1">prawdziwa historia o przetrwaniu</p>
+                <p class="log l2">himalaje</p>
+                <div id="image">
+                    <img class="image" src="./img/dlugosc.png" width="140px" height="130px" alt="filter applied" />
+                    <img class="image" src="./img/najszczyt.png" width="140px" height="130px" alt="filter applied" />
+                    <img class="image" src="./img/szerokosc.png" width="140px" height="130px" alt="filter applied" />
+                </div>
+            </div>
+            <div class="him">
+                <div class="film">
+                    <span id="film"></span>
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/yHUuMp0bFuk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <span id="charakterystyka"></span>
+                <h1>Krótka charakterystyka</h1>
+                <hr>
+                <p> Himalaje położone są w Południowej Azji, całe pasmo Himalajów ciągnie się na długości 2500 km
+                    a średnia szerokość pasma 180-350 km. Himalaje zajmują terytorium Chin, Indii, Nepalu, Bhutanu.
+                    Średnia wysokość pasm górskich w Himalajach wynosi 6000 m n.p.m.,
+                    wysokości te spadają w przełęczach do 4000 m n.p.m. Poza tym w Himalajach znajduje się dziesięć
+                    szczytów
+                    o wysokości ponad 8000 m n.p.m.
+                    Wśród nich najwyższy szczyt na świecie Mount Everest - 8848 m n.p.m..
+                    <br><br>
+                    W Himalajach przebiega wyraźna granica klimatyczna.
+                    Pod wpływem działania monsunów znajdują się stoki południowe. Działanie monsunów w tym obszarze
+                    powoduje
+                    wysokie opady w okresie letnim.
+                    W strefie oddziaływanie klimatu zwrotnikowego o cechach suchego i chłodnego klimatu znajdują się
+                    stoki
+                    południowe.
+                    Na obszarze Himalajów występują liczne lodowce i obszary wiecznie pokryte śniegiem łącznie zajmują
+                    one
+                    powierzchnię około 10 tys. km2.
+                    Największe obszary występują na Mount Evereście gdzie jęzor lodowcowy ciągnie się na długości 19 km,
+                    oraz na Gangotri i Zema gzie długość
+                    ta wynosi 26 km.
+                    <br><br>
+                    W Himalajach bardzo wyraziście widoczna jest piętrowość roślinna.
+                    Najniższe piętro do wysokości 1000 m n.p.m. porasta roślinność wilgotna o charakterze lasu
+                    tropikalnego
+                    zwanego terajem, w kolejnym
+                    piętrze występuje roślinność typowa dla lasów zwrotnikowych, wiecznie zielonych, rosną tu bambusy,
+                    palmy
+                    i paprocie.
+                    Na wysokości ponad 2000 m n.p.m. rosną lasy liściaste w których dominują dęby, klony, kasztany,
+                    występują tutaj też drzewa szpilkowe
+                    takie jak sosny i cedry. Górna granica lasu przebiega na wysokości około 3500-4000 m n.p.m. powyżej
+                    tej
+                    wysokości występuje roślinność
+                    typu alpejskiego, krzewy i łąki górskie. Na wysokości 4500-5700 m n.p.m. biegnie granica wiecznego
+                    śniegu.
+                    <br><br>
+                    Świat zwierzęcy w Himalajach jest bardzo różnorodny i bogaty pod względem gatunków.
+                    W południowej części Himalajów liczne doliny i przedgórza zamieszkują m.in. tygrysy, nosorożce,
+                    słonie,
+                    wiele gatunków małp,
+                    panda, mangusty. Wyższe wysokości są środowiskiem życia dla rysi, niedźwiedzi, dzików, piżmowców,
+                    kóz,
+                    jeleni oraz
+                    licznych gatunków owiec m.in. kaszgarskich i stepowych.
+            </div>
+            <div class="paralax">
+                <span id="container"></span>
+                <div class="container">
+                    <h2 >Zdobywcy Himalajów</h2>
+                </div>
+                <div class="container">
+                    <div class="contain">
+                        <p class="card">Reinhold Messner <br> 1970-1986 r. <br> Włochy</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Jerzy Kukuczka <br> 1979-1987 r. <br> Polska</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Erhard Loretan <br> 1982-1995 r. <br> Szwajcaria</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Carlos Carsolio <br> 1985-1996 r. <br> Meksyk</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Krzysztof Wielicki <br> 1980-1996 r. <br> Polska</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Junko Tabei <br> 1975 r. <br> Japonia</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Wanda Rutkiewicz <br> 1986 r. <br> Polska</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Liliane Barrard <br> 1986 r. <br> Francja</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Ginette Harrison <br> 1998 r. <br> Wielka Brytania</p>
+                    </div>
+                    <div class="contain">
+                        <p class="card">Kitty Calhoun-Grissom <br> 1990 r. <br> USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- second page -->
+        <div id="two-page">
+            <div class="paralax ">
+                <div class="paralax-quote">
+                    <div class="quote">
+                        <p>"Podróżować, doznawać wrażeń i uczyć się - znaczy żyć." </p>
+                        <br>
+                        <p class="author">- Szerpa Tenzing</p>
+                    </div>
+                    <div class="quote">
+                        <p>"Jeśli chciałbyś podróżować szybko i daleko, podróżuj bez niepotrzebnego bagażu. Porzuć
+                            zazdrość,
+                            zawiść, egoizm i strach."" </p>
+                        <br>
+                        <p class="author">- Cesare Pavese</p>
+                    </div>
+                    <div class="quote">
+                        <p>"Ważne jest nie samo osiągnięcie wierzchołka, lecz droga do niego." </p>
+                        <br>
+                        <p class="author">- Joe Tasker</p>
+                    </div>
+                </div>
+            </div>
+            <div class="two-page">
+                <h1> Maksymalna waga bagażu</h1>
+                <hr>
+                <p> Linie lotnicze latające do Lukli pozwalają na zabranie 15 kg bagażu.
+                    Jest to łączna masa bagażu nadawanego i podręcznego. Za każdy dodatkowy kilogram linie lotnicze
+                    doliczą
+                    opłatę.
+                    Niewielką, lecz należy pamiętać, że jeśli wszyscy pasażerowie będą mieli nadbagaż samolot może być
+                    przeciążony, a przez to piloci nie wystartują, dopóki jeden z bagaży nie zostanie wyłożony.
+                    Przyleci on jednym z kolejnych kursów, gdzie nie będzie plecakowej nadwagi. Jednak w
+                    niesprzyjających
+                    warunkach może to zająć kilka dni.
+                    Każdą rzecz, trzeba dwukrotnie obejrzeć (i zważyć) przed zapakowaniem do plecaka.
+                    <br>
+                    <br>
+                    Drugim czynnikiem warunkującym rozmiar plecaka będzie to czy na szlak wyruszamy sami, czy w
+                    towarzystwie
+                    przewodnika/tragarza.
+                    Zwykle taka osoba zabiera do 12 kg bagażu na osobę. Warto jeszcze potwierdzić tę informację w
+                    agencji
+                    przygotowującej trekking.
+                    Jednak nawet jeśli chcemy samemu podjąć wyzwanie rzucone przez Himalaje, należy zabrać jak najmniej
+                    rzeczy, które można wykorzystać w jak najszerszym zakresie.
+                </p>
+                <h1>W co się ubrać i co wziąć ze sobą</h1>
+                <hr>
+                <p>Czeka nas pełne spektrum temperatur i
+                    warunków, na jakie możemy trafić. Od kilkudziesięciu stopni “na dole”
+                    (2500 m n.p.m.) do dwudziestu stopni mrozu w okolicach bazy pod Everestem.
+                    Zatem ubiór na cebulkę na pewno się sprawdzi. </p>
+                <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ubrania</th>
+                            <th>Higiena</th>
+                            <th>Sprzęt</th>
+                            <th>Jedzenie</th>
+                            <th>Różności</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Zestaw bielizny termo</td>
+                            <td>Żel antybakteryjny</td>
+                            <td>Śpiwór</td>
+                            <td>Termos 1L</td>
+                            <td>Czołówka</td>
+                        </tr>
+                        <tr>
+                            <td>Koszulki sportowe z długim i krótkim rękawem </td>
+                            <td>Mokre chusteczki</td>
+                            <td>Kijki trekkingowe</td>
+                            <td>Batony</td>
+                            <td>Worki kompresyjne </td>
+                        </tr>
+                        <tr>
+                            <td>Polar</td>
+                            <td>Papier toaletowy</td>
+                            <td>Okulary lodowcowe</td>
+                            <td>Suszone owoce</td>
+                            <td>Mapa i przewodnik</td>
+                        </tr>
+                        <tr>
+                            <td>Softshell</td>
+                            <td>Pulsoksymetr</td>
+                            <td>Raczki</td>
+                            <td>czekolady</td>
+                            <td>Powerbank</td>
+                        </tr>
+                        <tr>
+                            <td>Kurtka przeciwdeszczowa</td>
+                            <td>Chusteczki jednorazowe</td>
+                            <td>Plecaki / torby</td>
+                            <td>cukierki</td>
+                            <td>Panel słoneczny</td>
+                        </tr>
+                        <tr>
+                            <td>Kurtka puchowa</td>
+                            <td>Płyn do płukania ust</td>
+                            <td rowspan="8">Scyzoryk</td>
+                            <td>Suszone mięso</td>
+                            <td>Długopis i pamiętnik</td>
+                        </tr>
+                        <tr>
+                            <td>Czapka</td>
+                            <td>Antyperspirant</td>
+                            <td>Liofilizaty</td>
+                            <td>Wodoszczelne etui</td>
+                        </tr>
+                        <tr>
+                            <td>Komin/Buff </td>
+                            <td>Apteczka</td>
+                            <td>Tabletki do uzdatniania wody</td>
+                            <td>Kartę na wi-fi</td>
+                        </tr>
+                        <tr>
+                            <td>Rękawiczki</td>
+                            <td>Elektrolity</td>
+                            <td>Czosnek</td>
+                            <td>Mała kłódka do zamknięcia plecaka/torby</td>
+                        </tr>
+                        <tr>
+                            <td>Spodnie</td>
+                            <td>Krem przeciwsłoneczny z filtrem UV</td>
+                            <td rowspan="4">Orzechi</td>
+                            <td>Ubezpieczenie</td>
+                        </tr>
+                        <tr>
+                            <td>Skarpety</td>
+                            <td>Pomadka do ust </td>
+                            <td>Aparat fotograficzny/kamerka</td>
+                        </tr>
+                        <tr>
+                            <td>Belizna</td>
+                            <td>Zestaw do kąpieli</td>
+                            <td>mp3</td>
+                        </tr>
+                        <tr>
+                            <td>Buty</td>
+                            <td></td>
+                            <td> Dużo radości</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <p>Wszelkie rzeczy i sprzęt, które okażą się niezbędne zawsze można dokupić w Lukli bądź Namcze, co też
+                    jest
+                    pewnym sposobem na odciążenie plecaka na etapie dolotu na trekking.</p>
+                <p>Pamiętajcie, że w górach płacimy Rupiami Nepalskimi. Przyjmowana jest tylko gotówka, której zapas
+                    należy
+                    przyszykować jeszcze w Katmandu. </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="foot">Warunki korzystania ze strony internetow</p>
+        <p class="foot">Polityka prywatności</p>
+        <p class="foot">Polityka plików cookie</p>
+        <p class="foot">© 2022 Himalaje.</p>
+    </footer>
+</body>
+
+</html>
