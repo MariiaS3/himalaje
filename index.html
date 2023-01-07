@@ -55,7 +55,7 @@
             document.getElementById("menu-btn").style.display = "none"
             if (window.innerWidth > 767) {
                 document.getElementById("pasek").style.justifyContent = "flex-start"
-                document.getElementById("pasek").style.paddingLeft = "10%"
+                document.getElementById("pasek").style.paddingLeft = "15%"
             }
             document.getElementById("bar").checked = false;
         }
@@ -76,10 +76,6 @@
                 <li><a class="menu" href="#film">Film</a></li>
                 <li><a class="menu" href="#charakterystyka">Charakterystyka</a></li>
                 <li><a class="menu" href="#container">Zdobywcy</a></li>
-                <li>
-                    <input class="radio" id="two" name="group" type="radio" onclick="displayPanelTwo()">
-                    <label class="menu" for="two">Zaopatrzenie</label>
-                </li>
             </ul>
         </nav>
     </div>
@@ -93,6 +89,9 @@
                     <img class="image" src="./img/dlugosc.png" width="140px" height="130px" alt="filter applied" />
                     <img class="image" src="./img/najszczyt.png" width="140px" height="130px" alt="filter applied" />
                     <img class="image" src="./img/szerokosc.png" width="140px" height="130px" alt="filter applied" />
+                </div>
+                <div id="btn-zaopatrzenie">
+                    <input class="btn-zaopatrzenie" name="group" type="button" onclick="displayPanelTwo()" value="Zaopatrzenie">
                 </div>
             </div>
             <div class="him">
